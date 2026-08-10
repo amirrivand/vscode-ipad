@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A50000000000000000000001"
+               BlueprintIdentifier = "T00001"
                BuildableName = "CodeOSSIpad.app"
                BlueprintName = "CodeOSSIpad"
                ReferencedContainer = "container:CodeOSSIpad.xcodeproj">
@@ -43,7 +43,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A50000000000000000000001"
+            BlueprintIdentifier = "T00001"
             BuildableName = "CodeOSSIpad.app"
             BlueprintName = "CodeOSSIpad"
             ReferencedContainer = "container:CodeOSSIpad.xcodeproj">
@@ -60,7 +60,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A50000000000000000000001"
+            BlueprintIdentifier = "T00001"
             BuildableName = "CodeOSSIpad.app"
             BlueprintName = "CodeOSSIpad"
             ReferencedContainer = "container:CodeOSSIpad.xcodeproj">

@@ -42,12 +42,5 @@
 	</array>
 	<key>UISupportsDocumentBrowser</key>
 	<false/>
-	<key>WorkbenchURL</key>
-	<string>https://vscode.dev</string>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsLocalNetworking</key>
-		<true/>
-	</dict>
 </dict>
 </plist>

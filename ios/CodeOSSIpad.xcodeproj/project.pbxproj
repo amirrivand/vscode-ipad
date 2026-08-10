@@ -7,27 +7,55 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A10000000000000000000001 /* CodeOSSIpadApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000001 /* CodeOSSIpadApp.swift */; };
-		A10000000000000000000002 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000002 /* RootView.swift */; };
-		A10000000000000000000003 /* WorkbenchWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000003 /* WorkbenchWebView.swift */; };
-		A10000000000000000000004 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000004 /* Configuration.swift */; };
-		A10000000000000000000005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000005 /* Assets.xcassets */; };
-		A10000000000000000000006 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000006 /* PrivacyInfo.xcprivacy */; };
+		B10001 /* CodeOSSIpadApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10001 /* CodeOSSIpadApp.swift */; };
+		B10002 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10002 /* RootView.swift */; };
+		B10003 /* WorkspaceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10003 /* WorkspaceStore.swift */; };
+		B10004 /* FileSidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10004 /* FileSidebarView.swift */; };
+		B10005 /* EditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10005 /* EditorView.swift */; };
+		B10006 /* AIPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10006 /* AIPlugin.swift */; };
+		B10007 /* AIPluginRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10007 /* AIPluginRegistry.swift */; };
+		B10008 /* AIChatStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10008 /* AIChatStore.swift */; };
+		B10009 /* AIChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10009 /* AIChatView.swift */; };
+		B10010 /* HTTPJSONClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10010 /* HTTPJSONClient.swift */; };
+		B10011 /* OpenAIPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10011 /* OpenAIPlugin.swift */; };
+		B10012 /* AnthropicPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10012 /* AnthropicPlugin.swift */; };
+		B10013 /* CursorPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10013 /* CursorPlugin.swift */; };
+		B10014 /* KimiPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10014 /* KimiPlugin.swift */; };
+		B10015 /* OpenAICompatiblePlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10015 /* OpenAICompatiblePlugin.swift */; };
+		B10016 /* SecretStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10016 /* SecretStore.swift */; };
+		B10017 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10017 /* SettingsView.swift */; };
+		B10018 /* AppSettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10018 /* AppSettingsStore.swift */; };
+		B10019 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F10019 /* Assets.xcassets */; };
+		B10020 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = F10020 /* PrivacyInfo.xcprivacy */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A20000000000000000000001 /* CodeOSSIpadApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeOSSIpadApp.swift; sourceTree = "<group>"; };
-		A20000000000000000000002 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
-		A20000000000000000000003 /* WorkbenchWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkbenchWebView.swift; sourceTree = "<group>"; };
-		A20000000000000000000004 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
-		A20000000000000000000005 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A20000000000000000000006 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		A20000000000000000000007 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A20000000000000000000008 /* CodeOSSIpad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeOSSIpad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F10001 /* CodeOSSIpadApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeOSSIpadApp.swift; sourceTree = "<group>"; };
+		F10002 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		F10003 /* WorkspaceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceStore.swift; sourceTree = "<group>"; };
+		F10004 /* FileSidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSidebarView.swift; sourceTree = "<group>"; };
+		F10005 /* EditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorView.swift; sourceTree = "<group>"; };
+		F10006 /* AIPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIPlugin.swift; sourceTree = "<group>"; };
+		F10007 /* AIPluginRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIPluginRegistry.swift; sourceTree = "<group>"; };
+		F10008 /* AIChatStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIChatStore.swift; sourceTree = "<group>"; };
+		F10009 /* AIChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIChatView.swift; sourceTree = "<group>"; };
+		F10010 /* HTTPJSONClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPJSONClient.swift; sourceTree = "<group>"; };
+		F10011 /* OpenAIPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIPlugin.swift; sourceTree = "<group>"; };
+		F10012 /* AnthropicPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnthropicPlugin.swift; sourceTree = "<group>"; };
+		F10013 /* CursorPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorPlugin.swift; sourceTree = "<group>"; };
+		F10014 /* KimiPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KimiPlugin.swift; sourceTree = "<group>"; };
+		F10015 /* OpenAICompatiblePlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAICompatiblePlugin.swift; sourceTree = "<group>"; };
+		F10016 /* SecretStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretStore.swift; sourceTree = "<group>"; };
+		F10017 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		F10018 /* AppSettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsStore.swift; sourceTree = "<group>"; };
+		F10019 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F10020 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		F10021 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F10022 /* CodeOSSIpad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeOSSIpad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A30000000000000000000001 /* Frameworks */ = {
+		FRW001 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,46 +65,100 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A40000000000000000000001 = {
+		G00001 = {
 			isa = PBXGroup;
 			children = (
-				A40000000000000000000002 /* CodeOSSIpad */,
-				A40000000000000000000003 /* Products */,
+				G00002 /* CodeOSSIpad */,
+				G00003 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		A40000000000000000000002 /* CodeOSSIpad */ = {
+		G00002 /* CodeOSSIpad */ = {
 			isa = PBXGroup;
 			children = (
-				A20000000000000000000001 /* CodeOSSIpadApp.swift */,
-				A20000000000000000000002 /* RootView.swift */,
-				A20000000000000000000003 /* WorkbenchWebView.swift */,
-				A20000000000000000000004 /* Configuration.swift */,
-				A20000000000000000000005 /* Assets.xcassets */,
-				A20000000000000000000006 /* PrivacyInfo.xcprivacy */,
-				A20000000000000000000007 /* Info.plist */,
+				F10001 /* CodeOSSIpadApp.swift */,
+				F10002 /* RootView.swift */,
+				G00004 /* Editor */,
+				G00005 /* AI */,
+				G00006 /* Settings */,
+				G00007 /* Models */,
+				F10019 /* Assets.xcassets */,
+				F10020 /* PrivacyInfo.xcprivacy */,
+				F10021 /* Info.plist */,
 			);
 			path = CodeOSSIpad;
 			sourceTree = "<group>";
 		};
-		A40000000000000000000003 /* Products */ = {
+		G00003 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A20000000000000000000008 /* CodeOSSIpad.app */,
+				F10022 /* CodeOSSIpad.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		G00004 /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				F10003 /* WorkspaceStore.swift */,
+				F10004 /* FileSidebarView.swift */,
+				F10005 /* EditorView.swift */,
+			);
+			path = Editor;
+			sourceTree = "<group>";
+		};
+		G00005 /* AI */ = {
+			isa = PBXGroup;
+			children = (
+				F10006 /* AIPlugin.swift */,
+				F10007 /* AIPluginRegistry.swift */,
+				F10008 /* AIChatStore.swift */,
+				F10009 /* AIChatView.swift */,
+				F10010 /* HTTPJSONClient.swift */,
+				G00008 /* Providers */,
+			);
+			path = AI;
+			sourceTree = "<group>";
+		};
+		G00006 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F10016 /* SecretStore.swift */,
+				F10017 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		G00007 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F10018 /* AppSettingsStore.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		G00008 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				F10011 /* OpenAIPlugin.swift */,
+				F10012 /* AnthropicPlugin.swift */,
+				F10013 /* CursorPlugin.swift */,
+				F10014 /* KimiPlugin.swift */,
+				F10015 /* OpenAICompatiblePlugin.swift */,
+			);
+			path = Providers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A50000000000000000000001 /* CodeOSSIpad */ = {
+		T00001 /* CodeOSSIpad */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A70000000000000000000003 /* Build configuration list for PBXNativeTarget "CodeOSSIpad" */;
+			buildConfigurationList = C00003 /* Build configuration list for PBXNativeTarget "CodeOSSIpad" */;
 			buildPhases = (
-				A60000000000000000000001 /* Sources */,
-				A30000000000000000000001 /* Frameworks */,
-				A60000000000000000000002 /* Resources */,
+				P00001 /* Sources */,
+				FRW001 /* Frameworks */,
+				P00002 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -84,25 +166,25 @@
 			);
 			name = CodeOSSIpad;
 			productName = CodeOSSIpad;
-			productReference = A20000000000000000000008 /* CodeOSSIpad.app */;
+			productReference = F10022 /* CodeOSSIpad.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		A80000000000000000000001 /* Project object */ = {
+		P00000 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
-					A50000000000000000000001 = {
+					T00001 = {
 						CreatedOnToolsVersion = 15.4;
 					};
 				};
 			};
-			buildConfigurationList = A70000000000000000000001 /* Build configuration list for PBXProject "CodeOSSIpad" */;
+			buildConfigurationList = C00001 /* Build configuration list for PBXProject "CodeOSSIpad" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,44 +192,58 @@
 				en,
 				Base,
 			);
-			mainGroup = A40000000000000000000001;
-			productRefGroup = A40000000000000000000003 /* Products */;
+			mainGroup = G00001;
+			productRefGroup = G00003 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A50000000000000000000001 /* CodeOSSIpad */,
+				T00001 /* CodeOSSIpad */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A60000000000000000000002 /* Resources */ = {
+		P00002 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A10000000000000000000005 /* Assets.xcassets in Resources */,
-				A10000000000000000000006 /* PrivacyInfo.xcprivacy in Resources */,
+				B10019 /* Assets.xcassets in Resources */,
+				B10020 /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A60000000000000000000001 /* Sources */ = {
+		P00001 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A10000000000000000000001 /* CodeOSSIpadApp.swift in Sources */,
-				A10000000000000000000002 /* RootView.swift in Sources */,
-				A10000000000000000000003 /* WorkbenchWebView.swift in Sources */,
-				A10000000000000000000004 /* Configuration.swift in Sources */,
+				B10001 /* CodeOSSIpadApp.swift in Sources */,
+				B10002 /* RootView.swift in Sources */,
+				B10003 /* WorkspaceStore.swift in Sources */,
+				B10004 /* FileSidebarView.swift in Sources */,
+				B10005 /* EditorView.swift in Sources */,
+				B10006 /* AIPlugin.swift in Sources */,
+				B10007 /* AIPluginRegistry.swift in Sources */,
+				B10008 /* AIChatStore.swift in Sources */,
+				B10009 /* AIChatView.swift in Sources */,
+				B10010 /* HTTPJSONClient.swift in Sources */,
+				B10011 /* OpenAIPlugin.swift in Sources */,
+				B10012 /* AnthropicPlugin.swift in Sources */,
+				B10013 /* CursorPlugin.swift in Sources */,
+				B10014 /* KimiPlugin.swift in Sources */,
+				B10015 /* OpenAICompatiblePlugin.swift in Sources */,
+				B10016 /* SecretStore.swift in Sources */,
+				B10017 /* SettingsView.swift in Sources */,
+				B10018 /* AppSettingsStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		A90000000000000000000001 /* Debug */ = {
+		CFG001 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -166,7 +262,7 @@
 			};
 			name = Debug;
 		};
-		A90000000000000000000002 /* Release */ = {
+		CFG002 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -181,7 +277,7 @@
 			};
 			name = Release;
 		};
-		A90000000000000000000003 /* Debug */ = {
+		CFG003 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -199,7 +295,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.amirrivand.codeoss.ipad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -213,7 +309,7 @@
 			};
 			name = Debug;
 		};
-		A90000000000000000000004 /* Release */ = {
+		CFG004 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -231,7 +327,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.amirrivand.codeoss.ipad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -248,25 +344,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A70000000000000000000001 /* Build configuration list for PBXProject "CodeOSSIpad" */ = {
+		C00001 /* Build configuration list for PBXProject "CodeOSSIpad" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A90000000000000000000001 /* Debug */,
-				A90000000000000000000002 /* Release */,
+				CFG001 /* Debug */,
+				CFG002 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A70000000000000000000003 /* Build configuration list for PBXNativeTarget "CodeOSSIpad" */ = {
+		C00003 /* Build configuration list for PBXNativeTarget "CodeOSSIpad" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A90000000000000000000003 /* Debug */,
-				A90000000000000000000004 /* Release */,
+				CFG003 /* Debug */,
+				CFG004 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = A80000000000000000000001 /* Project object */;
+	rootObject = P00000 /* Project object */;
 }

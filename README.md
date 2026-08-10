@@ -3,9 +3,9 @@
 [![Bugs](https://img.shields.io/github/issues/microsoft/vscode/bug.svg)](https://github.com/microsoft/vscode/issues?utf8=✓&q=is%3Aissue+is%3Aopen+label%3Abug)
 [![Gitter](https://img.shields.io/badge/chat-on%20gitter-yellow.svg)](https://gitter.im/Microsoft/vscode)
 
-## iPadOS App Store shell
+## iPadOS native app
 
-This fork includes a native **iPad-only** `WKWebView` host under [`ios/`](ios/README.md). Open `ios/CodeOSSIpad.xcodeproj` in Xcode on a Mac to build, sign, and submit to App Store Connect. The shell loads a configurable web workbench URL (default `https://vscode.dev`); it does not run the Electron desktop app on iPadOS.
+This fork includes a native **iPad-only** SwiftUI app under [`ios/`](ios/README.md): file sidebar, code editor, and streaming AI chat with built-in plugins for OpenAI, Anthropic Claude, Cursor-compatible endpoints, Kimi, and any OpenAI-compatible API. Open `ios/CodeOSSIpad.xcodeproj` in Xcode on a Mac to build, sign, and submit to App Store Connect.
 
 ## The Repository
 

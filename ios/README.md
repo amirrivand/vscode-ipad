@@ -1,14 +1,26 @@
-# Code OSS for iPadOS
+# Code OSS for iPadOS (native)
 
-Native **iPad-only** shell that hosts the Code - OSS / VS Code **web workbench** in `WKWebView`. This is the App Store–oriented packaging surface for this fork: open the Xcode project on a Mac, sign it, and archive for TestFlight / App Store Connect.
+Native **iPad-only** SwiftUI app: file sidebar, code editor, and a streaming AI chat panel backed by an **internal AI plugin** system. No `WKWebView`, no Electron.
 
-> Electron cannot run on iPadOS. This app does **not** embed the desktop IDE. It wraps a remote (or self-hosted) web workbench.
+## Features
+
+- iPad `NavigationSplitView` layout: **Files · Editor · AI**
+- In-memory workspace (create / rename / delete files, monospace editor)
+- Built-in AI plugins:
+  - **OpenAI** (`api.openai.com`)
+  - **Anthropic Claude** (Messages API)
+  - **Cursor** (OpenAI-compatible base URL + API key)
+  - **Kimi / Moonshot** (`api.moonshot.cn`)
+  - **OpenAI Compatible** (DeepSeek, Groq, Ollama, Together, …)
+- API keys stored in the **Keychain**
+- Optional editor-context injection into prompts
+- Quick actions: Explain / Refactor / Fix / Tests
 
 ## Requirements
 
 - macOS with **Xcode 15+**
-- Apple Developer Program membership (for device installs and App Store)
-- An iPad or iPad Simulator (deployment target **iPadOS 17**)
+- Apple Developer Program (device + App Store)
+- iPad / iPad Simulator (**iPadOS 17+**)
 
 ## Open and run
 
@@ -16,59 +28,58 @@ Native **iPad-only** shell that hosts the Code - OSS / VS Code **web workbench**
 open ios/CodeOSSIpad.xcodeproj
 ```
 
-1. Select the **CodeOSSIpad** target.
-2. Set your **Team** under Signing & Capabilities (`DEVELOPMENT_TEAM` is empty in the project on purpose).
-3. Confirm **Bundle Identifier** `com.amirrivand.codeoss.ipad` (change if needed for your Apple ID).
-4. Choose an **iPad** run destination (device family is `2` — iPad only).
-5. Run.
+1. Select **CodeOSSIpad**
+2. Set your **Team** (Signing & Capabilities)
+3. Run on an **iPad** destination
+4. Open **Settings** → choose a plugin → paste API key → chat
 
-Default workbench URL is `https://vscode.dev` (overridable in `Info.plist` key `WorkbenchURL`, or at runtime via the in-app gear).
+## Add another AI provider
 
-## Point at your own workbench
+1. Create a type conforming to `AIPlugin` under `CodeOSSIpad/AI/Providers/`
+2. Register it in `AIPluginRegistry.bootstrap()`
+3. Add the Swift file to the Xcode target (already grouped under Providers)
 
-For a product you control (recommended before App Store review):
+```swift
+protocol AIPlugin: AnyObject {
+    var id: String { get }
+    var displayName: String { get }
+    var defaultModel: String { get }
+    var availableModels: [String] { get }
+    var apiKeyAccount: String { get }
+    var defaultBaseURL: URL? { get }
+    func complete(_ request: AICompletionRequest, apiKey: String, baseURL: URL?,
+                  onChunk: @escaping @Sendable (AICompletionChunk) -> Void) async throws
+}
+```
 
-1. Build the web workbench from this repo (`npm run compile-web` / gulp web targets — see upstream VS Code docs).
-2. Host it (static CDN, Codespaces, code-server, etc.).
-3. Set `WorkbenchURL` in [`CodeOSSIpad/Info.plist`](CodeOSSIpad/Info.plist) or enter the URL in the app settings sheet.
-
-Local HTTP hosts are allowed via `NSAllowsLocalNetworking` for development.
-
-## App Store checklist
+## App Store notes
 
 | Item | Notes |
 |------|--------|
 | Device | iPad only (`TARGETED_DEVICE_FAMILY = 2`) |
-| Icons | Add a 1024×1024 marketing icon in `Assets.xcassets/AppIcon.appiconset` |
-| Privacy | `PrivacyInfo.xcprivacy` ships with UserDefaults reason `CA92.1` |
-| Encryption | `ITSAppUsesNonExemptEncryption = false` (export compliance); revisit if you add custom crypto |
-| Branding | Use **Code OSS** (or your own name). Do **not** use Microsoft “Visual Studio Code” / “VS Code” trademarks in the store listing without permission |
-| Review risk | Thin web wrappers are often rejected. Prefer hosting **your own** workbench, add meaningful native value (auth, keyboard, offline cache, file providers), and explain the developer-tools use case in Review Notes |
-| Screenshots | Capture on iPad Pro sizes required by App Store Connect |
+| Privacy | Keychain + UserDefaults declared in `PrivacyInfo.xcprivacy` |
+| Network | App calls third-party AI HTTPS APIs you configure |
+| Branding | Use **Code OSS** / your brand — not Microsoft “VS Code” trademarks |
+| Review | Disclose AI providers and that user-supplied API keys leave the device |
 
-### Archive & upload (on a Mac)
+Archive on a Mac: **Product → Archive → App Store Connect**.
 
-1. Product → Archive  
-2. Distribute App → App Store Connect  
-3. Complete listing, privacy nutrition labels, and review notes in App Store Connect  
-
-## Project layout
+## Layout
 
 ```
-ios/
-  CodeOSSIpad.xcodeproj/     Xcode project (iPadOS)
-  CodeOSSIpad/
-    CodeOSSIpadApp.swift     App entry
-    RootView.swift           Chrome + settings
-    WorkbenchWebView.swift   WKWebView host
-    Configuration.swift      URL resolution
-    Info.plist               iPad orientations, WorkbenchURL
-    PrivacyInfo.xcprivacy    Privacy manifest
-    Assets.xcassets          App icon / accent
+ios/CodeOSSIpad/
+  CodeOSSIpadApp.swift
+  RootView.swift
+  Editor/          workspace + editor UI
+  AI/              plugin protocol, chat, HTTP
+  AI/Providers/    OpenAI, Anthropic, Cursor, Kimi, compatible
+  Settings/        Keychain + settings UI
+  Models/          app preferences
 ```
 
 ## Limits
 
-- No local Node extension host, integrated terminal backend, or Electron native modules on-device.
-- Full IDE features still depend on the remote/web workbench you load.
-- This Linux CI environment cannot compile or sign the `.ipa`; use Xcode on macOS.
+- Not a port of the Electron VS Code workbench
+- Workspace is in-app (not full Files app / Git yet)
+- Cursor support expects an OpenAI-compatible gateway URL you configure
+- This Linux environment cannot compile the `.ipa` — use Xcode on macOS

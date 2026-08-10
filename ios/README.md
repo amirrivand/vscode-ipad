@@ -23,7 +23,7 @@ Workflow: [`.github/workflows/ipad-build.yml`](../.github/workflows/ipad-build.y
 | Job | When | Output |
 |-----|------|--------|
 | **Build iPad (Simulator)** | PRs/pushes that touch `ios/`, or manual **Run workflow** | Unsigned `CodeOSSIpad.app` artifact |
-| **Archive IPA (signed)** | Same, **and** signing secrets are set | `.ipa` artifact |
+| **Archive IPA (signed)** | Manual **Run workflow** with `sign_ipa=true` + signing secrets | `.ipa` artifact |
 
 ### Enable Actions
 
@@ -31,6 +31,8 @@ Workflow: [`.github/workflows/ipad-build.yml`](../.github/workflows/ipad-build.y
 2. Open **Actions → iPad App Build → Run workflow** (or push an `ios/` change)
 
 ### Optional signing secrets (for IPA)
+
+Enable signed IPA via **Actions → iPad App Build → Run workflow** and check **sign_ipa**.
 
 Add under **Settings → Secrets and variables → Actions**:
 
@@ -42,7 +44,7 @@ Add under **Settings → Secrets and variables → Actions**:
 | `APPLE_TEAM_ID` | 10-character Apple Team ID |
 | `KEYCHAIN_PASSWORD` | Temporary CI keychain password (any strong value) |
 
-Without these secrets, only the simulator build runs (compile check + downloadable `.app`).
+Without `sign_ipa`, only the simulator build runs (compile check + downloadable `.app`).
 
 ## Requirements
 

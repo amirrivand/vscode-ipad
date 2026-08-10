@@ -16,13 +16,41 @@ Native **iPad-only** SwiftUI app: file sidebar, code editor, and a streaming AI 
 - Optional editor-context injection into prompts
 - Quick actions: Explain / Refactor / Fix / Tests
 
+## GitHub Actions (online build)
+
+Workflow: [`.github/workflows/ipad-build.yml`](../.github/workflows/ipad-build.yml)
+
+| Job | When | Output |
+|-----|------|--------|
+| **Build iPad (Simulator)** | PRs/pushes that touch `ios/`, or manual **Run workflow** | Unsigned `CodeOSSIpad.app` artifact |
+| **Archive IPA (signed)** | Same, **and** signing secrets are set | `.ipa` artifact |
+
+### Enable Actions
+
+1. Repo → **Settings → Actions → General** → allow Actions
+2. Open **Actions → iPad App Build → Run workflow** (or push an `ios/` change)
+
+### Optional signing secrets (for IPA)
+
+Add under **Settings → Secrets and variables → Actions**:
+
+| Secret | Purpose |
+|--------|---------|
+| `BUILD_CERTIFICATE_BASE64` | Base64-encoded `.p12` distribution certificate |
+| `P12_PASSWORD` | Password for the `.p12` |
+| `BUILD_PROVISION_PROFILE_BASE64` | Base64-encoded App Store provisioning profile |
+| `APPLE_TEAM_ID` | 10-character Apple Team ID |
+| `KEYCHAIN_PASSWORD` | Temporary CI keychain password (any strong value) |
+
+Without these secrets, only the simulator build runs (compile check + downloadable `.app`).
+
 ## Requirements
 
-- macOS with **Xcode 15+**
-- Apple Developer Program (device + App Store)
+- macOS with **Xcode 15+** (local) or GitHub-hosted `macos-15` (CI)
+- Apple Developer Program (device installs, signed IPA, App Store)
 - iPad / iPad Simulator (**iPadOS 17+**)
 
-## Open and run
+## Open and run (local Mac)
 
 ```bash
 open ios/CodeOSSIpad.xcodeproj
